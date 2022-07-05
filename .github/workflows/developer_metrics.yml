@@ -6,7 +6,7 @@ jobs:
   Developer_Metrics:
     runs-on: ubuntu-latest
     steps:
-    - uses: ./.github/actions/metrics/action.yml@master
+    - uses: ./.github/actions/metrics/action.yml@v0.1
       with:
         github_api_token: ${{ secrets.API_TOKEN_GITHUB }}
 
