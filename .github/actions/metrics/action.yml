@@ -1,0 +1,23 @@
+name: Pull Request Developer Metrics
+description: PR Developer Metrics
+
+inputs:
+  github_api_token:
+    description: "API Token for GitHub"
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: echo "The name of the branch is ${{ github.ref }}"
+    - uses: actions/checkout@v2
+    - shell: bash
+      run: |
+        echo "My demo workflow !!!"
+        echo "The of the repository is : ${{ github.repository }}"
+        echo "The name of the branch is : ${{ github.title }}"
+      env:
+        API_KEY: ${{ inputs.github_api_token }}
+    - shell: bash
+      run: echo "🍏 This job's status is ${{ job.status }}."
