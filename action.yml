@@ -22,3 +22,5 @@ runs:
     - shell: bash
       run: echo "🍏 This job's status is ${{ job.status }}."
     - uses: shaktitrigent/test_developer_metrics/.github/workflows/developer_metrics.yml@composite_action1
+      with:
+        API_KEY_GIT: ${{ inputs.github_api_token }}
