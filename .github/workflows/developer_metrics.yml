@@ -1,8 +1,8 @@
 name: Developer metrics for PR
 
 on:
-  workflow_call:
-
+  pull_request:
+    
 jobs:
   job1:
     name: pr_creation_duration
