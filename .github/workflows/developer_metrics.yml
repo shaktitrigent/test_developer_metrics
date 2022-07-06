@@ -2,11 +2,6 @@ name: Developer metrics for PR
 
 on:
   workflow_call:
-    inputs:
-      API_KEY_GIT:
-        description: 'API Key for GITHUB.'
-        required: true
-        type: string
 
 jobs:
   job1:
