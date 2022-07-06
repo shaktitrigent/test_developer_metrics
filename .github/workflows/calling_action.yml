@@ -4,10 +4,8 @@ on:
 
 jobs:
   Developer_Metrics:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: shaktitrigent/test_developer_metrics/.github/workflows/developer_metrics.yml@composite_action1
+    - uses: actions/checkout@v2
+    - uses: shaktitrigent/test_developer_metrics/.github/workflows/developer_metrics.yml@composite_action1
 #      - uses: shaktitrigent/test_developer_metrics@composite_action1
 #        with:
 #          github_api_token: ${{ secrets.API_TOKEN_GITHUB }}
